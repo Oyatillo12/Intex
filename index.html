@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="login-body">
+    
+
+    <div class="fixed w-[621px] inset-0 m-auto h-[519px] bg-white rounded-[25px] pt-[35px] pb-[46px] px-2">
+        <img class="mx-auto" src="./images/logo-img.svg" alt="logo img" width="421" height="72">
+        <p class="text-center text-[#A3A3A3] text-[25px] leading-[29px] mt-[17px] mb-[60px]">Введите имя пользователя и пароль, чтобы получить доступ к системе.</p>
+        <form class="login-form w-full flex flex-col  items-center">
+          <input class="w-[359px] mb-[16px] py-[12px] text-center outline-none focus:border-[#3F8C8E] shadow-xl border-[1px] border-[#CBCBCB] rounded-[17px] text-[25px] leading-[29px] font-bold" type="text" placeholder="Имя пользователя" autocomplete="off" name="username">
+          <input class="w-[359px] mb-[10px] py-[12px] text-center outline-none focus:border-[#3F8C8E] shadow-xl border-[1px] border-[#CBCBCB] rounded-[17px] text-[25px] leading-[29px] font-bold" type="password" placeholder="Пароль" autocomplete="off" name="userpassword">
+          <a class="text-blue-500 text-2xl underline" href="./register.html">Забыл пароль?</a>
+          <button class="bg-[#3F8C8E]  mt-[30px] w-[237px] py-[12px] rounded-[10px] text-white text-[25px] leading-[29px] font-bold hover:opacity-80 duration-300" type="submit">Войти</button>
+        </form>
+    </div>
+    
+    <script src="./js/admin/login.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
