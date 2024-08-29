@@ -17,7 +17,7 @@
 
 
     <div class="flex">
-        <nav class="w-[25%] bg-white h-auto pt-[34px] " >
+        <nav class="w-[25%] bg-white h-[100vh] pt-[34px] " >
             <img class="mx-auto" src="./images/logo-img.svg" alt="Site logo" width="300">
             <span class="h-[3px] w-full bg-[#EBEBFF] block absolute top-[90px]"></span>
             <ul class="flex flex-col mt-[50px] space-y-[15px] pl-[41px]">
@@ -37,21 +37,26 @@
         </nav>
         <div class="w-[75%] pl-[42px] pr-[48px] pt-[31px]">
             <div class="flex items-center justify-end gap-[29px]">
-                <a class="text-[22px] leading-[25px] text-[#A6A6A6]" href="./dashboard.html">Просмотр веб-сайта</a>
+                <a class="text-[22px] leading-[25px] text-[#A6A6A6] hover:text-[#009398] duration-300" href="./dashboard.html">Просмотр веб-сайта</a>
                 <span class="bg-[#D6D6D6] w-[2px] h-[14px] block"></span>
                 <div class="flex items-center gap-[11px]">
                     <img src="./images/avatar-img.svg" alt="Avatar img" width="18" height="22">
-                    <strong class="user-name font-normal text-[22px] leading-[25px] text-[#A6A6A6]">Joe Melton</strong>
+                    <button onclick="handleLogut()" >
+                        <strong class="user-name font-normal hover:text-[#009398] duration-300 text-[22px] leading-[25px] text-[#A6A6A6]">Joe Melton</strong>
+                    </button>
                 </div>
             </div>
             <div class="flex items-center justify-between mt-[58px]">
-                <label class="cursor-pointer flex items-center w-[377px] py-[11px] pl-[34px] rounded-[25px] bg-white shadow-xl">
-                    <input class="w-[80%] outline-none py-[8px] text-[23px] leading-[23px] border-r-[#E6E6E6] border-r-[2px]" autocomplete="off" type="text" placeholder="Найти" name="searching">
-                    <div class="pl-[22px] w-[20%]">
-                        <img src="./images/lupa.svg" alt="search" width="24" height="24">
-                    </div>
-                </label>
-                <button class="w-[222px] py-[20px] border-[#009398] border rounded-[29px] bg-[#009398] text-white text-[20px] leading-[23px] font-bold hover:text-[#009398] hover:bg-transparent duration-300 ">+ Добавить продукт</button>
+                <div class="relative">
+                    <label class="cursor-pointer flex items-center w-[377px] py-[11px] pl-[34px] rounded-[25px] bg-white shadow-xl">
+                        <input class="search-input w-[80%] outline-none py-[8px] text-[23px] leading-[23px] border-r-[#E6E6E6] border-r-[2px]" autocomplete="off" type="text" placeholder="Найти" name="searching">
+                        <div class="pl-[22px] w-[20%]">
+                            <img src="./images/lupa.svg" alt="search" width="24" height="24">
+                        </div>
+                    </label>
+                    <ul class="popap-list z-50 overflow-hidden h-0 p-0 absolute bg-[#009398] w-full rounded-xl"></ul>
+                </div>
+                <button class="add-product w-[222px] py-[20px] border-[#009398] border rounded-[29px] bg-[#009398] text-white text-[20px] leading-[23px] font-bold hover:text-[#009398] hover:bg-transparent duration-300 ">+ Добавить продукт</button>
             </div>
             <ul class="flex items-center mt-[40px] justify-center gap-[46px]">
                 <li class="karkas-title font-bold text-[35px] text-[#009398] pb-[8px] border-b-[3px] border-b-[#009398] leading-[40px]">Каркасные</li>
@@ -71,6 +76,12 @@
             </div>
         </div>
     </div>
+    <div class="modal-add fixed hidden inset-0 backdrop-blur flex items-center justify-center">
+        <div class="modal-inner w-[950px] bg-[#F8F8F8] rounded-xl px-[106px] pt-[41px] pb-[27px] relative">
+           
+        </div>
+    </div>
+    
 
 
     <script src="./js/admin/admin.js"></script>
