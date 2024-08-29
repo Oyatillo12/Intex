@@ -34,6 +34,7 @@ elNaduvTitle.addEventListener("click",function(){
 
 elValueAdd.addEventListener("click", function(){
     elAddmodal.classList.remove("hidden")
+    elModalInner.className = "modal-inner w-[950px] bg-[#F8F8F8] rounded-xl px-[106px] pt-[41px] pb-[27px] relative"
     elModalInner.innerHTML = `
         <button class="close-modal absolute top-[41px] right-[40px]">
                 <img src="./images/close.svg" alt="close img" width="38" height="38">
